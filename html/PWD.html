@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CrisisTance</title>
+    <link
+      rel="shortcut icon"
+      href="./../media/images/logo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./../css/Root-Style.css" />
+
+    <link rel="stylesheet" href="./../css/PWD-Style.css" />
+  </head>
+  <body>
+    <span id="overlay"></span>
+    <main class="main-container">
+      <div class="main-header">
+        <img
+          src="./../media/icons/icons8-reply-arrow-100.png"
+          alt=""
+          id="btn-back"
+        />
+
+        <div id="form-container">
+          <img src="./../media/icons/image 3 (1).png" alt="" />
+          <h1>Person with Disabilities</h1>
+        </div>
+      </div>
+
+      <hr />
+
+      <section class="front-container">
+        <h1>Requirements:</h1>
+
+        <ul class="container">
+          <li><a>Medical Certificate (with License No./ Physician)</a></li>
+          <li><a>Birth Certificate</a></li>
+          <li><a>Person with Disability Form</a></li>
+          <li><a>1 X 1 Picture ( 2 pcs )</a></li>
+        </ul>
+
+        <div class="z">
+          <button id="btn-front-next">Next</button>
+        </div>
+      </section>
+
+      <form class="fill-up-form" id="fill-up-form">
+        <!-- <h1>Client/Kliyente:</h1> -->
+
+        <div class="input-field">
+          <label for="inp-img">1 x 1 Picture: </label>
+          <input
+            required
+            type="file"
+            name="inp-img"
+            id="inp-img"
+            class="special-inp"
+            accept="image/*"
+            maxlength="1"
+            style="color: #fff"
+          />
+          <img src="" alt="1 x 1 Picture" id="img-container" />
+        </div>
+
+        <div class="input-field">
+          <label for="inp-category">Category: </label>
+          <select
+            required
+            name="inp-category"
+            id="inp-category"
+            class="mid-inp"
+          >
+            <option value="New">&bull; New</option>
+            <option value="Renewal">&bull; Renewal</option>
+          </select>
+
+          <label for="inp-date">Date Applied: </label>
+          <input
+            required
+            type="date"
+            name="inp-date"
+            id="inp-date"
+            class="mid-inp"
+          />
+        </div>
+
+        <div class="input-field">
+          <label for="inp-pwd-no">Person with disability No.: </label>
+          <input
+            required
+            type="text"
+            name="inp-pwd-no"
+            id="inp-pwd-no"
+            class="full-inp"
+            placeholder="RR-PPMM-BBB-NNNNNNN"
+          />
+        </div>
+
+        <div class="input-field">
+          <label for="inp-name">Name: </label>
+          <input
+            required
+            type="text"
+            name="inp-name"
+            id="inp-name"
+            class="full-inp"
+            placeholder="Surname / First Name / Middle Name / Extension Name"
+          />
+        </div>
+
+        <div class="input-field">
+          <label for="inp-dob">Date of Birth: </label>
+          <input
+            required
+            type="date"
+            name="inp-dob"
+            id="inp-dob"
+            class="short-inp"
+          />
+
+          <label for="inp-sex">Sex: </label>
+          <input
+            required
+            type="text"
+            name="inp-sex"
+            id="inp-sex"
+            class="short-inp"
+          />
+
+          <label for="inp-civil-status">Civil Status: </label>
+          <select
+            required
+            type="text"
+            name="inp-civil-status"
+            id="inp-civil-status"
+            class="short-inp"
+          >
+            <option value="Single">Single</option>
+            <option value="Separated">Separated</option>
+            <option value="Cohabitation (live-in)">
+              Cohabitation (live-in)
+            </option>
+            <option value="Married">Married</option>
+            <option value="Widow/er">Widow/er</option>
+          </select>
+        </div>
+
+        <div class="input-field">
+          <label for="inp-disability">Type of Disability: </label>
+          <select
+            required
+            name="inp-disability"
+            id="inp-disability"
+            class="mid-inp"
+          >
+            <option value="Deaf or Hard of Hearing">
+              &bull; Deaf or Hard of Hearing
+            </option>
+            <option value="Intellectual Disability">
+              &bull; Intellectual Disability
+            </option>
+            <option value="Leaning Disability">
+              &bull; Leaning Disability
+            </option>
+            <option value="Mental Disability">&bull; Mental Disability</option>
+            <option value="Physical Disability (Orthopedic)">
+              &bull; Physical Disability (Orthopedic)
+            </option>
+            <option value="Psychosocial Disability">
+              &bull; Psychosocial Disability
+            </option>
+            <option value="Speech & Language Impairment">
+              &bull; Speech & Language Impairment
+            </option>
+            <option value="Visual Disability">&bull; Visual Disability</option>
+            <option value="Cancer (RA11215)">&bull; Cancer (RA11215)</option>
+            <option value="Rare Disease (RA10747)">
+              &bull; Rare Disease (RA10747)
+            </option>
+          </select>
+
+          <label for="inp-cause">Cause of Disability: </label>
+          <select required name="inp-cause" id="inp-cause" class="mid-inp">
+            <option value="Autism (Congenital/Inborn)">
+              &bull; Autism (Congenital/Inborn)
+            </option>
+            <option value="ADHD (Congenital/Inborn)">
+              &bull; ADHD (Congenital/Inborn)
+            </option>
+            <option value="Cerebral Palsy (Congenital/Inborn)">
+              &bull; Cerebral Palsy (Congenital/Inborn)
+            </option>
+            <option value="Down Syndrome (Congenital/Inborn)">
+              &bull; Down Syndrome (Congenital/Inborn)
+            </option>
+            <option value="Chronic Illness (Acquired)">
+              &bull; Chronic Illness (Acquired)
+            </option>
+            <option value="Cerebral Palsy (Acquired)">
+              &bull; Cerebral Palsy (Acquired)
+            </option>
+            <option value="Injury (Acquired)">&bull; Injury (Acquired)</option>
+          </select>
+        </div>
+
+        <div class="input-field">
+          <label for="inp-address">Residence Address: </label>
+          <input
+            required
+            type="text"
+            name="inp-address"
+            id="inp-address"
+            class="full-inp"
+            placeholder="House No. St. / Sitio / Brgy. City / Municipality / Province / Region"
+          />
+        </div>
+
+        <h1 style="color: #fff">Contact Details:</h1>
+
+        <div class="input-field">
+          <label for="inp-landline">Landline No.: </label>
+          <input
+            required
+            type="tel"
+            name="inp-landline"
+            id="inp-landline"
+            class="mid-inp"
+          />
+
+          <label for="inp-mobile">Mobile No.: </label>
+          <input
+            required
+            type="tel"
+            name="inp-mobile"
+            id="inp-mobile"
+            class="mid-inp"
+          />
+        </div>
+
+        <div class="input-field">
+          <label for="inp-email">Email: </label>
+          <input
+            required
+            type="email"
+            name="inp-email"
+            id="inp-email"
+            class="full-inp"
+          />
+        </div>
+
+        <h1>Educational Attainment of the Applicant</h1>
+
+        <div class="radio-field" id="educational-attainment">
+          <label>
+            <input
+              required
+              type="radio"
+              name="educational-attainment"
+              value="None"
+            />None
+          </label>
+          <label>
+            <input
+              required
+              type="radio"
+              name="educational-attainment"
+              value="Elementary"
+            />Elementary
+          </label>
+          <label>
+            <input
+              required
+              type="radio"
+              name="educational-attainment"
+              value="Senior High School"
+            />Senior High School
+          </label>
+          <label>
+            <input
+              required
+              type="radio"
+              name="educational-attainment"
+              value="Vocational"
+            />Vocational
+          </label>
+          <label>
+            <input
+              required
+              type="radio"
+              name="educational-attainment"
+              value="Kindergarten"
+            />Kindergarten
+          </label>
+          <label>
+            <input
+              required
+              type="radio"
+              name="educational-attainment"
+              value="Junior Hight School"
+            />Junior Hight School
+          </label>
+          <label>
+            <input
+              required
+              type="radio"
+              name="educational-attainment"
+              value="College"
+            />College
+          </label>
+          <label>
+            <input
+              required
+              type="radio"
+              name="educational-attainment"
+              value="Post Graduate"
+            />Post Graduate
+          </label>
+        </div>
+
+        <h1>Occupation</h1>
+
+        <div class="radio-field" id="occupation">
+          <label
+            ><input
+              required
+              type="radio"
+              name="occupation"
+              value="Managers"
+            />Managers</label
+          >
+          <label
+            ><input
+              required
+              type="radio"
+              name="occupation"
+              value="Professionals"
+            />Professionals</label
+          >
+          <label
+            ><input
+              required
+              type="radio"
+              name="occupation"
+              value="Technical & Associate Professionals"
+            />Technical & Associate Professionals</label
+          >
+          <label
+            ><input
+              required
+              type="radio"
+              name="occupation"
+              value="Clerical Support Workers"
+            />Clerical Support Workers</label
+          >
+          <label
+            ><input
+              required
+              type="radio"
+              name="occupation"
+              value="Service & Sales Workers"
+            />Service & Sales Workers</label
+          >
+          <label
+            ><input
+              required
+              type="radio"
+              name="occupation"
+              value="Skilled Agricultural, Forestry & Fishery Workers"
+            />Skilled Agricultural, Forestry & Fishery Workers</label
+          >
+          <label
+            ><input
+              required
+              type="radio"
+              name="occupation"
+              value="Craft & Related Trade Workers"
+            />Craft & Related Trade Workers</label
+          >
+          <label
+            ><input
+              required
+              type="radio"
+              name="occupation"
+              value="Plant & Machines Operators and Assemblers"
+            />Plant & Machines Operators and Assemblers</label
+          >
+          <label
+            ><input
+              required
+              type="radio"
+              name="occupation"
+              value="Elementary Occupations"
+            />Elementary Occupations</label
+          >
+          <label
+            ><input
+              required
+              type="radio"
+              name="occupation"
+              value="Armed Forces Occupations"
+            />Armed Forces Occupations</label
+          >
+          <label
+            ><input
+              required
+              type="radio"
+              name="occupation"
+              value="Others" />Others, specify:
+            <input type="text" id="occupation-others" name="occupation-others"
+          /></label>
+        </div>
+
+        <h1>Status of Employment:</h1>
+
+        <div class="radio-field" id="status-of-employment">
+          <label
+            ><input
+              required
+              type="radio"
+              name="status-of-employment"
+              value="Employed"
+            />Employed</label
+          >
+          <label
+            ><input
+              required
+              type="radio"
+              name="status-of-employment"
+              value="Unemployed"
+            />Unemployed</label
+          >
+          <label
+            ><input
+              required
+              type="radio"
+              name="status-of-employment"
+              value="Self-employed"
+            />Self-employed</label
+          >
+        </div>
+
+        <h1>Types of Employment:</h1>
+
+        <div class="radio-field" id="types-of-employment">
+          <label
+            ><input
+              required
+              type="radio"
+              name="types-of-employment"
+              value="Permanent / Regular"
+            />Permanent / Regular</label
+          >
+          <label
+            ><input
+              required
+              type="radio"
+              name="types-of-employment"
+              value="Seasonal"
+            />Seasonal</label
+          >
+          <label
+            ><input
+              required
+              type="radio"
+              name="types-of-employment"
+              value="Casual"
+            />Casual</label
+          >
+          <label
+            ><input
+              required
+              type="radio"
+              name="types-of-employment"
+              value="Emergency"
+            />Emergency</label
+          >
+        </div>
+
+        <h1>Category of Employment:</h1>
+
+        <div class="radio-field" id="category-of-employment">
+          <label
+            ><input
+              required
+              type="radio"
+              name="category-of-employment"
+              value="Government"
+            />Government</label
+          >
+          <label
+            ><input
+              required
+              type="radio"
+              name="category-of-employment"
+              value="Private"
+            />Private</label
+          >
+        </div>
+
+        <h1>Organizational Information:</h1>
+
+        <div class="input-field">
+          <label for="inp-affiliate">Organizational Affiliate: </label>
+          <input
+            required
+            type="text"
+            name="inp-affiliate"
+            id="inp-affiliate"
+            class="mid-inp"
+          />
+
+          <label for="inp-contact-person">Contact Person: </label>
+          <input
+            required
+            type="text"
+            name="inp-contact-person"
+            id="inp-contact-person"
+            class="mid-inp"
+          />
+        </div>
+
+        <div class="input-field">
+          <label for="inp-office-address">Office Address: </label>
+          <input
+            required
+            type="text"
+            name="inp-office-address"
+            id="inp-office-address"
+            class="full-inp"
+          />
+        </div>
+
+        <div class="input-field">
+          <label for="inp-tel-no">Telephone No.: </label>
+          <input
+            required
+            type="tel"
+            name="inp-tel-no"
+            id="inp-tel-no"
+            class="full-inp"
+          />
+        </div>
+
+        <h1>ID Reference No.:</h1>
+
+        <div class="input-field">
+          <label for="inp-sss">SSS No.: </label>
+          <input type="text" name="inp-sss" id="inp-sss" class="short-inp" />
+
+          <label for="inp-gsis">GSIS No.: </label>
+          <input type="text" name="inp-gsis" id="inp-gsis" class="short-inp" />
+
+          <label for="inp-pag-ibig">PAG-IBIG No.: </label>
+          <input
+            type="text"
+            name="inp-pag-ibig"
+            id="inp-pag-ibig"
+            class="short-inp"
+          />
+        </div>
+
+        <div class="input-field">
+          <label for="inp-psn">PSN No.: </label>
+          <input type="text" name="inp-psn" id="inp-psn" class="mid-inp" />
+
+          <label for="inp-philhealth">PhilHealth No.: </label>
+          <input
+            type="text"
+            name="inp-philhealth"
+            id="inp-philhealth"
+            class="mid-inp"
+          />
+        </div>
+
+        <h1>Family Background:</h1>
+
+        <div class="family-background">
+          <div class="family-header">
+            <span></span>
+            <span>Last Name</span>
+            <span>First Name</span>
+            <span>Middle Name</span>
+          </div>
+
+          <div class="family-input-field">
+            <label for="father-last-name">Father's Name:</label>
+            <input
+              required
+              type="text"
+              id="father-last-name"
+              name="father-last-name"
+            />
+            <input
+              required
+              type="text"
+              id="father-first-name"
+              name="father-first-name"
+            />
+            <input
+              required
+              type="text"
+              id="father-middle-name"
+              name="father-middle-name"
+            />
+          </div>
+
+          <div class="family-input-field">
+            <label for="mother-last-name">Mother's Name:</label>
+            <input
+              required
+              type="text"
+              id="mother-last-name"
+              name="mother-last-name"
+            />
+            <input
+              required
+              type="text"
+              id="mother-first-name"
+              name="mother-first-name"
+            />
+            <input
+              required
+              type="text"
+              id="mother-middle-name"
+              name="mother-middle-name"
+            />
+          </div>
+
+          <div class="family-input-field">
+            <label for="guardian-last-name">Guardian's Name:</label>
+            <input
+              required
+              type="text"
+              id="guardian-last-name"
+              name="guardian-last-name"
+            />
+            <input
+              required
+              type="text"
+              id="guardian-first-name"
+              name="guardian-first-name"
+            />
+            <input
+              required
+              type="text"
+              id="guardian-middle-name"
+              name="guardian-middle-name"
+            />
+          </div>
+        </div>
+
+        <h1>Accomplished By:</h1>
+
+        <div class="accomplished-field" id="accomplished-field">
+          <label
+            ><input
+              required
+              type="radio"
+              name="accomplished-by"
+              value="APPLICANT"
+            />APPLICANT</label
+          >
+          <label
+            ><input
+              required
+              type="radio"
+              name="accomplished-by"
+              value="GUARDIAN"
+            />GUARDIAN</label
+          >
+          <label
+            ><input
+              required
+              type="radio"
+              name="accomplished-by"
+              value="REPRESENTATIVE"
+            />REPRESENTATIVE</label
+          >
+
+          <label>Last Name</label>
+          <label>First Name</label>
+          <label>Middle Name</label>
+
+          <input required type="text" name="accomplished-last-name" />
+          <input required type="text" name="accomplished-first-name" />
+          <input required type="text" name="accomplished-middle-name" />
+        </div>
+
+        <div class="bottom-field">
+          <p>Name of Certifying Physician:</p>
+          <p>License No.:</p>
+        </div>
+
+        <div class="z">
+          <button type="submit">Next</button>
+        </div>
+      </form>
+
+      <section class="prepare-section">
+        <h1>
+          Please prepare all the required documents and submit to the office,
+          and we will contact you soon.
+        </h1>
+
+        <div class="z">
+          <button id="btn-prepare-back">Back</button>
+          <button id="btn-prepare-ok">OK</button>
+        </div>
+      </section>
+
+      <section class="successful-section">
+        <img src="./../media/icons/check.png" alt="" id="successful-check" />
+
+        <h1>Successfully Submitted!!!</h1>
+        <p>
+          Please await out review of your requirements, and we will contact you
+          soon. Thank you for choosing out services!
+        </p>
+      </section>
+    </main>
+
+    <script
+      src="https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js"
+      type="module"
+    ></script>
+    <script
+      src="https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js"
+      type="module"
+    ></script>
+    <script
+      src="https://www.gstatic.com/firebasejs/10.12.4/firebase-database.js"
+      type="module"
+    ></script>
+
+    <script type="module" src="./../js/PWD-Script.js" defer></script>
+    <script type="module" src="./../js/Login-Checker-Script.js" defer></script>
+
+    <script>
+      const popUpOverlay = document.querySelector(".pop-up-overlay");
+      const btnBack = document.getElementById("btn-back");
+      const formContainer = document.getElementById("form-container");
+
+      const assistanceArray = [
+        document.querySelector(".medical-assistance-container"),
+        document.querySelector(".burial-container"),
+        document.querySelector(".education-container"),
+        document.querySelector(".financial-container"),
+      ];
+
+      function handleAssistance(index) {
+        assistanceArray[index].classList.add("active");
+        popUpOverlay.classList.add("active");
+        btnBack.style.display = "none";
+        formContainer.style.marginLeft = "0";
+      }
+
+      function handleAssistanceOk() {
+        popUpOverlay.classList.remove("active");
+        btnBack.style.display = "block";
+        formContainer.style.marginLeft = "-100px";
+
+        assistanceArray.forEach((container) =>
+          container.classList.remove("active")
+        );
+      }
+    </script>
+  </body>
+</html>

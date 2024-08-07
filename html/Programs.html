@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CrisisTance</title>
+    <link
+      rel="shortcut icon"
+      href="./../media/images/logo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./../css/Root-Style.css" />
+    <link rel="stylesheet" href="./../css/Header-Style.css" />
+
+    <link rel="stylesheet" href="./../css/Programs-Style.css" />
+  </head>
+
+  <body>
+    <header class="header-container" id="header-container"></header>
+
+    <main class="main-container">
+      <img
+        src="./../media/images/program-header-img.png"
+        alt=""
+        style="width: 100%"
+      />
+
+      <h1 style="text-align: center">
+        Assistance to Individuals in Crisis Situation (AICS)
+      </h1>
+      <p>
+        The Office of the Municipal Welfare & Development provides financial
+        assistance to individual and families whose resources are inadequate to
+        meet their needs
+      </p>
+      <img src="./../media/images/program-img-1.png" alt="" />
+      <h2>PROGRAM'S OBJECTIVE</h2>
+      <p>
+        The objective of the AICS Program is to help our poor countrymen who are
+        in crisis to meet their needs.
+      </p>
+
+      <h2>AICS ASSISTANCE</h2>
+      <div class="aics-container">
+        <img src="./../media/images/medical-icon.png" alt="" />
+        <h3>MEDICAL ASSISTANCE</h3>
+      </div>
+      <div class="aics-container">
+        <img src="./../media/images/burial-icon.png" alt="" />
+        <h3>BURIAL ASSISTANCE</h3>
+      </div>
+      <div class="aics-container">
+        <img src="./../media/images/financial-icon.png" alt="" />
+        <h3>FINANCIAL ASSISTANCE</h3>
+      </div>
+      <div class="aics-container">
+        <img src="./../media/images/educational-icon.png" alt="" />
+        <h3>EDUCATIONAL ASSISTANCE</h3>
+      </div>
+
+      <h1>Solo Parent</h1>
+      <p>
+        The DSWD being the led agency in the implementation of Solo Patent
+        Welfare Act (RA 8972), advocates the implementation of comprehensive
+        programs for Solo Parents in the local government unit through the MSWD
+      </p>
+      <img src="./../media/images/program-img-2.png" alt="" />
+
+      <h1>Persons with Disability</h1>
+      <p>
+        Programs that provides equal rights, opportunities and privileges as
+        mandated by magna carta for Person with disability. This is done though
+        individual and group counseling, orientation and mobility training,
+        sport and
+      </p>
+      <img src="./../media/images/program-img-3.png" alt="" />
+    </main>
+
+    <script
+      src="https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js"
+      type="module"
+    ></script>
+    <script
+      src="https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js"
+      type="module"
+    ></script>
+    <script
+      src="https://www.gstatic.com/firebasejs/10.12.4/firebase-database.js"
+      type="module"
+    ></script>
+
+    <script src="./../js/Header-Script.js" defer></script>
+    <script type="module" src="./../js/Login-Checker-Script.js" defer></script>
+    <script>
+      document.addEventListener("headerLoaded", () => {
+        document.getElementById("btn-programs").classList.add("active");
+      });
+    </script>
+  </body>
+</html>

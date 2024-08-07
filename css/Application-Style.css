@@ -1,0 +1,27 @@
+.main-container img {
+  display: block;
+  margin: auto;
+  width: 15vw;
+}
+
+.main-container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-color: var(--color-gray-1);
+  width: 100%;
+}
+
+.main-container div h1 {
+  font-size: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container div p {
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
+}

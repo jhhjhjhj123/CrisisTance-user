@@ -1,0 +1,85 @@
+.main-container {
+  margin: 0 10vw 20px 10vw;
+}
+
+.main-container img {
+  display: block;
+  margin: auto;
+}
+
+hr {
+  width: 98.75vw;
+  margin-left: -10vw;
+}
+
+.main-container h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  color: var(--color-blue-2);
+  margin-top: 40px;
+}
+
+.main-container p {
+  font-size: 1.5rem;
+}
+
+.main-container .about-img {
+  width: 100%;
+  position: relative;
+}
+
+.main-container .about-img img:not(.header-text) {
+  width: 100%;
+}
+
+.main-container .about-img img.header-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mswdo-members {
+  display: grid;
+  place-items: center;
+}
+
+.mswdo-members h2 {
+  font-size: 5rem;
+  font-weight: 900;
+  margin: 40px 0 0 0;
+  padding: 0;
+}
+
+.mswdo-members p {
+  margin: 10px 0;
+  padding: 0;
+}
+
+.mswdo-members img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.mswdo-members .first-member {
+  display: grid;
+  place-items: center;
+  width: 250px;
+  margin: 40px 0;
+}
+
+.mswdo-members .other-members {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  gap: 40px;
+  width: 100%;
+}
+
+.mswdo-members .other-members .members {
+  display: grid;
+  place-items: center;
+  width: 250px;
+}
