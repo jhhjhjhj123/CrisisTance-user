@@ -1,0 +1,343 @@
+html,
+body {
+  background-image: url(./../media/images/bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  margin: 0;
+  padding: 0;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-white-1);
+  z-index: 1;
+  opacity: 1;
+}
+
+.main-container {
+  display: block;
+  position: relative;
+  width: 96vw;
+  min-height: 94vh;
+  background-color: var(--color-blue-1);
+  z-index: 10;
+  margin: 15px auto;
+  border: 1px solid #000;
+  border-radius: 20px;
+}
+
+.main-header,
+.main-header div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.main-header div {
+  margin-left: -100px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.main-header div img {
+  width: 160px;
+  height: 160px;
+}
+
+.main-header div h1 {
+  color: var(--color-yellow-1);
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.main-header #btn-back {
+  float: left;
+  width: 80px;
+  height: 80px;
+  margin-left: 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* ================================================================================================================================================ */
+.front-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.front-container h1 {
+  color: var(--color-yellow-1);
+  font-size: 2.8rem;
+  font-weight: 400;
+  padding: 0;
+  margin: 20px 0 10px 0;
+}
+
+.front-container .container {
+  list-style: none;
+  padding-left: 0;
+  /* margin-left: -140px; */
+}
+
+.front-container li {
+  position: relative;
+  margin-bottom: 15px;
+  padding-left: 30px;
+}
+
+.front-container li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.front-container a {
+  font-size: 2.4rem;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  height: 20px;
+  padding-left: 10px;
+  font-weight: lighter;
+  cursor: normal;
+}
+
+.z {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.z button {
+  background-color: var(--color-blue-2);
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 14px 24px;
+  font-size: 1.7rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+#btn-front-next {
+  margin-right: 50px;
+  margin-bottom: 5px;
+}
+
+/* ================================================================================================================================================ */
+
+.fill-up-form {
+  display: none;
+  margin: 10px auto;
+  padding: 10px 30px;
+}
+
+.fill-up-form h1 {
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+.input-field {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.input-field img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.input-field label {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 100;
+  width: 12%;
+}
+
+.input-field input,
+.input-field select {
+  font-size: 1.3rem;
+  padding: 5px;
+  border-radius: 5px;
+  margin-right: 10px;
+  /* width: 100%; */
+}
+
+.input-field .short-inp {
+  width: calc(21.33% - 10px);
+}
+
+.input-field .mid-inp {
+  width: calc(38% - 10px);
+}
+
+.input-field .full-inp {
+  width: calc(88% - 10px);
+}
+
+.input-field .special-inp {
+  width: calc(88% - 170px);
+}
+
+.radio-field {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+}
+
+.radio-field label {
+  font-size: 1.3rem;
+  color: #fff;
+  font-weight: 100;
+  margin: 10px 0;
+}
+
+.radio-field input[type="radio"] {
+  margin-right: 10px;
+}
+
+.radio-field input[type="text"] {
+  width: 50%;
+  font-size: 1.3rem;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.family-background .family-header {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  color: #fff;
+  font-size: 1.3rem;
+  width: 100%;
+  gap: 10px;
+  /* margin-right: 20px; */
+}
+
+.family-background .family-input-field {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  margin: 10px 0;
+  gap: 10px;
+}
+
+.family-background .family-input-field label {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 100;
+}
+
+.family-background .family-input-field input {
+  font-size: 1.3rem;
+  padding: 5px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.accomplished-field {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  place-items: center;
+  width: 100%;
+}
+
+.accomplished-field label {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 100;
+}
+
+.accomplished-field input[type="radio"] {
+  margin: 10px 10px 30px 0;
+}
+
+.accomplished-field input[type="text"] {
+  width: 90%;
+  font-size: 1.3rem;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.bottom-field {
+  margin-top: 70px;
+}
+
+.bottom-field p {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 100;
+}
+/* ============================================================================================================================================= */
+
+.prepare-section {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: none;
+  place-items: center;
+  height: 50%;
+  width: 100%;
+}
+
+.prepare-section h1 {
+  font-size: 1.8rem;
+  text-align: center;
+  width: 70%;
+  color: #fff;
+}
+
+.prepare-section button {
+  margin: 10px 40px 10px 0;
+}
+
+/* ============================================================================================================================================= */
+
+.successful-section {
+  display: none;
+  place-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.successful-section img {
+  cursor: pointer;
+}
+
+.successful-section h1 {
+  font-size: 3rem;
+  color: #fff;
+  text-align: center;
+  margin: 20px 0 0 0;
+  padding: 0;
+}
+
+.successful-section p {
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+  width: 70%;
+}

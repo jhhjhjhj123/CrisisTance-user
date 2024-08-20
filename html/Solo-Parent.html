@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CrisisTance</title>
+    <link
+      rel="shortcut icon"
+      href="./../media/images/logo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./../css/Root-Style.css" />
+
+    <link rel="stylesheet" href="./../css/Solo-Parent-Style.css" />
+  </head>
+  <body>
+    <span id="overlay"></span>
+    <main class="main-container">
+      <div class="main-header">
+        <img
+          src="./../media/icons/icons8-reply-arrow-100.png"
+          alt=""
+          id="btn-back"
+        />
+
+        <div id="form-container">
+          <img src="./../media/icons/image 48.png" alt="" />
+          <h1>Solo Parent</h1>
+        </div>
+      </div>
+
+      <hr />
+
+      <section class="front-section">
+        <div class="front-container">
+          <h1>Application form Requirements:</h1>
+
+          <ul class="container">
+            <li><a>Accomplished Solo Parent Information sheet</a></li>
+            <li><a>Photo copy of the following</a></li>
+            <li class="li-indent">
+              <a>a. Birth Certificate of dependent children</a>
+            </li>
+            <li class="li-indent">
+              <a>b. Death Certificate ( if case is death )</a>
+            </li>
+            <li><a>Picture 1x1 (For ID) and 2x2 Picture</a></li>
+            <li><a>Barangay Certificate of become Solo</a></li>
+          </ul>
+
+          <div class="z">
+            <button id="btn-front-next">Next</button>
+          </div>
+        </div>
+      </section>
+
+      <form class="fill-up-form" id="fill-up-form">
+        <div class="input-field">
+          <label for="inp-category">Category: </label>
+          <select
+            required
+            name="inp-category"
+            id="inp-category"
+            class="mid-inp"
+          >
+            <option value="NEW">NEW</option>
+            <option value="RENEWAL">RENEWAL</option>
+            <option value="DUPLICATE">DUPLICATE (Lost solo parent ID)</option>
+          </select>
+        </div>
+
+        <div class="radio-group">
+          <h1 style="color: #fff">
+            PLEASE CHECK THE REASON WHY YOU BECAME A SINGLE PARENT
+          </h1>
+
+          <label style="margin: 20px 0; display: block"
+            ><input
+              required
+              type="radio"
+              name="single-parent"
+              value="MARRIED, w/ child/ren but Separated (solo parent)"
+              style="margin-right: 10px"
+            />MARRIED, w/ child/ren but Separated (solo parent)</label
+          >
+
+          <div
+            id="married-container"
+            style="margin: 20px 0 20px 30px; display: none"
+          >
+            <label class="special-label"
+              ><input
+                type="radio"
+                name="married-radio"
+                value="Church Wedding"
+              />Church Wedding</label
+            >
+
+            <label class="special-label"
+              ><input
+                type="radio"
+                name="married-radio"
+                value="Civil Wedding"
+              />Civil Wedding</label
+            >
+
+            <label class="special-label">
+              No. of years Separated -
+              <input type="number" name="married-years" class="short-inp" />
+              (Please specify)
+            </label>
+          </div>
+
+          <label style="margin: 20px 0; display: block"
+            ><input
+              required
+              type="radio"
+              name="single-parent"
+              value="NOT married but with children (single parent)"
+              style="margin-right: 10px"
+            />NOT married but with children (single parent)</label
+          >
+
+          <label style="margin: 20px 0; display: block"
+            ><input
+              required
+              type="radio"
+              name="single-parent"
+              value="NOT married but with adopted child/ren  (single parent)"
+              style="margin-right: 10px"
+            />NOT married but with adopted child/ren (single parent)</label
+          >
+
+          <div class="input-field" style="margin: 20px 0">
+            <label style="width: 15%"
+              ><input
+                required
+                type="radio"
+                name="single-parent"
+                value="WIDOW / ER"
+              />WIDOW / ER
+            </label>
+
+            <label class="special-label">
+              No. of years -
+              <input type="number" name="widow-years" class="short-inp" />
+              (Please specify)
+            </label>
+          </div>
+
+          <div class="input-field" style="margin: 20px 0">
+            <label style="width: 15%"
+              ><input
+                required
+                type="radio"
+                name="single-parent"
+                value="ANNULLED"
+              />ANNULLED</label
+            >
+
+            <label class="special-label">
+              No. of years -
+              <input type="number" name="annulled-years" class="short-inp" />
+              (Please specify)
+            </label>
+          </div>
+
+          <div class="input-field" style="margin: 20px 0">
+            <label style="width: 15%"
+              ><input
+                required
+                type="radio"
+                name="single-parent"
+                value="Spouse abroad"
+              />Spouse abroad</label
+            >
+
+            <label class="special-label">
+              No. of years -
+              <input type="number" name="spouse-years" class="short-inp" />
+              (Please specify)
+            </label>
+          </div>
+        </div>
+
+        <div class="radio-group">
+          <label>Are you currently in a Relationship?</label>
+
+          <label class="special-label"
+            ><input type="radio" name="relationship" value="Yes" />Yes</label
+          >
+          <label class="special-label"
+            ><input type="radio" name="relationship" value="No" />No</label
+          >
+        </div>
+
+        <hr />
+
+        <h1 style="width: 100%; text-align: center">
+          Personal Data Information
+        </h1>
+
+        <div class="input-field">
+          <label for="inp-name">Name: </label>
+          <input
+            required
+            type="text"
+            name="inp-name"
+            id="inp-name"
+            class="full-inp"
+            placeholder="Surname / First Name / Middle Name / Extension Name"
+          />
+        </div>
+
+        <div class="input-field">
+          <label for="inp-age">Age: </label>
+          <input
+            required
+            type="number"
+            name="inp-age"
+            id="inp-age"
+            class="very-short-inp"
+          />
+
+          <label for="inp-sex">Sex: </label>
+          <!-- <input
+            required
+            type="text"
+            name="inp-sex"
+            id="inp-sex"
+            class="very-short-inp"
+          /> -->
+          <select required name="inp-sex" id="inp-sex" class="very-short-inp">
+            <option value="M">Male (M)</option>
+            <option value="F">Female (F)</option>
+          </select>
+
+          <label for="inp-civil-status">Civil Status: </label>
+          <select
+            required
+            type="text"
+            name="inp-civil-status"
+            id="inp-civil-status"
+            class="very-short-inp"
+          >
+            <option value="Single">Single</option>
+            <option value="Separated">Separated</option>
+            <option value="Cohabitation (live-in)">
+              Cohabitation (live-in)
+            </option>
+            <option value="Married">Married</option>
+            <option value="Widow/er">Widow/er</option>
+          </select>
+
+          <label for="inp-dob">Date of Birth: </label>
+          <input
+            required
+            type="date"
+            name="inp-dob"
+            id="inp-dob"
+            class="very-short-inp"
+          />
+        </div>
+
+        <div class="input-field">
+          <label for="inp-pob">Place of Birth: </label>
+          <input
+            required
+            type="text"
+            name="inp-pob"
+            id="inp-pob"
+            class="short-inp"
+          />
+
+          <label for="inp-citizenship">Citizenship: </label>
+          <input
+            required
+            type="text"
+            name="inp-citizenship"
+            id="inp-citizenship"
+            class="short-inp"
+          />
+
+          <label for="inp-religion">Religion: </label>
+          <input
+            required
+            type="text"
+            name="inp-religion"
+            id="inp-religion"
+            class="short-inp"
+          />
+        </div>
+
+        <div class="input-field">
+          <label for="inp-skills">Skills/Hobby (please specify): </label>
+          <input
+            required
+            type="text"
+            name="inp-skills"
+            id="inp-skills"
+            class="full-inp"
+          />
+        </div>
+
+        <div class="input-field">
+          <label for="inp-address">Present Address: </label>
+          <input
+            required
+            type="text"
+            name="inp-address"
+            id="inp-address"
+            class="full-inp"
+            placeholder="House No., Street Name, Barangay Name, Municipality, Province"
+          />
+        </div>
+
+        <div class="input-field">
+          <label for="inp-landline">Landline Number: </label>
+          <input
+            required
+            type="tel"
+            name="inp-landline"
+            id="inp-landline"
+            class="mid-inp"
+          />
+
+          <label for="inp-mobile-number">Mobile Number: </label>
+          <input
+            required
+            type="tel"
+            name="inp-mobile-number"
+            id="inp-mobile-number"
+            class="mid-inp"
+          />
+
+          <!-- <label for="inp-email">E-mail Address: </label>
+          <input
+            required
+            type="email"
+            name="inp-email"
+            id="inp-email"
+            class="mid-inp"
+          /> -->
+        </div>
+
+        <div class="input-field">
+          <label for="inp-email">E-mail Address: </label>
+          <input
+            required
+            type="email"
+            name="inp-email"
+            id="inp-email"
+            class="full-inp"
+          />
+        </div>
+
+        <hr />
+
+        <h1 style="width: 100%; text-align: center">
+          Educational Attainment of the Applicant
+        </h1>
+
+        <div class="input-field">
+          <label for="inp-elementary">Elementary: </label>
+          <input
+            required
+            type="text"
+            name="inp-elementary"
+            id="inp-elementary"
+            class="full-inp"
+          />
+        </div>
+
+        <div class="input-field">
+          <label for="inp-high-school">High School: </label>
+          <input
+            required
+            type="text"
+            name="inp-high-school"
+            id="inp-high-school"
+            class="full-inp"
+          />
+        </div>
+
+        <div class="input-field">
+          <label for="inp-college">College: </label>
+          <input
+            required
+            type="text"
+            name="inp-college"
+            id="inp-college"
+            class="full-inp"
+          />
+        </div>
+
+        <hr />
+
+        <h1 style="width: 100%; text-align: center">
+          Information on Child/ren
+        </h1>
+
+        <div class="family-members">
+          <div class="family-members-header">
+            <h2>Name of Child</h2>
+            <h2>Age</h2>
+            <h2>Date of Birth</h2>
+            <h2>Place of Birth</h2>
+            <h2>Relationship</h2>
+            <h2>Grade Level</h2>
+          </div>
+
+          <div class="family-members-list" id="family-members-list"></div>
+
+          <button id="btn-add-member" type="button">Add Child</button>
+        </div>
+
+        <hr />
+
+        <h1 style="width: 100%; text-align: center">Financial Information</h1>
+
+        <div class="input-field">
+          <label for="inp-job">Occupation / Current Job: </label>
+          <input
+            required
+            type="text"
+            name="inp-job"
+            id="inp-job"
+            class="mid-inp"
+          />
+
+          <label for="inp-monthly-income">Monthly Income: </label>
+          <input
+            required
+            type="text"
+            name="inp-monthly-income"
+            id="inp-monthly-income"
+            class="mid-inp"
+          />
+        </div>
+
+        <div class="input-field">
+          <label for="inp-additional-income">Any Additional Income: </label>
+          <input
+            required
+            type="text"
+            name="inp-additional-income"
+            id="inp-additional-income"
+            class="mid-inp"
+          />
+
+          <label for="inp-child-support">Amount of Child Support: </label>
+          <input
+            required
+            type="text"
+            name="inp-child-support"
+            id="inp-child-support"
+            class="mid-inp"
+          />
+        </div>
+
+        <hr />
+
+        <div class="signature-field">
+          <!-- <img src="" alt="E-signature" style="color: #fff" /> -->
+
+          <input required type="text" name="printed-name" id="printed-name" />
+          <!-- <label for="e-signature">Signature</label> -->
+          <label for="printed-name">(Printed Name of Applicant)</label>
+
+          <!-- <div class="input-field">
+            <label for="e-signature" style="width: 30%">E-signature:</label>
+            <input
+              required
+              type="file"
+              name="e-signature"
+              id="e-signature"
+              style="color: #fff"
+              accept="image/*"
+              maxlength="1"
+            />
+          </div> -->
+        </div>
+
+        <div class="z">
+          <button id="btn-form-next" type="submit">Next</button>
+        </div>
+      </form>
+
+      <section class="prepare-section">
+        <h1>
+          Please prepare all the required documents and submit to the office,
+          and we will contact you soon.
+        </h1>
+
+        <div class="z">
+          <button id="btn-prepare-back">Back</button>
+          <button id="btn-prepare-ok">OK</button>
+        </div>
+      </section>
+
+      <section class="successful-section">
+        <img src="./../media/icons/check.png" alt="" id="successful-check" />
+
+        <h1>Successfully Submitted!!!</h1>
+        <p>
+          Please await out review of your requirements, and we will contact you
+          soon. Thank you for choosing out services!
+        </p>
+      </section>
+    </main>
+
+    <script
+      src="https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js"
+      type="module"
+    ></script>
+    <script
+      src="https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js"
+      type="module"
+    ></script>
+    <script
+      src="https://www.gstatic.com/firebasejs/10.12.4/firebase-database.js"
+      type="module"
+    ></script>
+
+    <script type="module" src="./../js/Solo-Parent-Script.js" defer></script>
+    <script type="module" src="./../js/Login-Checker-Script.js" defer></script>
+  </body>
+</html>

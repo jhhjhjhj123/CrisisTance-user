@@ -1,0 +1,74 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto auto 20px auto;
+  border: 2px solid #000;
+  border-radius: 20px;
+  padding: 50px;
+  width: 70vw;
+}
+
+.main-container .main-logo {
+  width: 15%;
+}
+
+.main-container h1 {
+  font-size: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container .inp-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  padding: 10px;
+  border: 1px solid var(--color-yellow-3);
+  height: 68px;
+  width: 100%;
+}
+
+.main-container .inp-field img {
+  width: 60px;
+  margin-right: 20px;
+}
+
+.main-container .inp-field input {
+  width: calc(90% - 20px);
+  border: none;
+  font-size: 1.3rem;
+  padding: 5px;
+}
+
+.main-container .login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+
+.main-container .login-form button {
+  font-size: 1.3rem;
+  padding: 12px 50px;
+  border: none;
+  border-radius: 50px;
+  background-color: var(--color-blue-2);
+  cursor: pointer;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.main-container label {
+  font-size: 1.2rem;
+}
+
+.main-container a {
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: #000;
+  text-decoration: none;
+}
